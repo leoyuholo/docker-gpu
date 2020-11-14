@@ -1,4 +1,4 @@
-FROM tensorflow/tensorflow:2.0.0b0-gpu-py3-jupyter
+FROM tensorflow/tensorflow:2.2.1-gpu-py3-jupyter
 
 RUN wget --quiet https://repo.anaconda.com/archive/Anaconda3-5.3.0-Linux-x86_64.sh -O ~/anaconda.sh && \
     /bin/bash ~/anaconda.sh -b -p /opt/conda && \
