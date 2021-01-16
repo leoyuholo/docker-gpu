@@ -1,7 +1,7 @@
 version: '2.4'
 services:
   jupyter:
-    image: tensorflow/tensorflow:latest-gpu
+    image: tensorflow/tensorflow:latest-gpu # cuda-10.2 image id: 8a8486aa1902
     ports:
       - 8088:8888
     user: root
