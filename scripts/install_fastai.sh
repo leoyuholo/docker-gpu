@@ -1,6 +1,6 @@
 #!bin/bash
 set -e
 
-conda install -y -c fastai -c pytorch fastai
-conda install -y -c fastai fastbook
+mamba install -y -c fastai -c pytorch fastai
+mamba install -y -c fastai fastbook
 

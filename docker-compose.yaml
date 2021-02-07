@@ -8,8 +8,8 @@ services:
     ipc: host
     shm_size: 64G
     runtime: nvidia
-    environment:
-      - NVIDIA_VISIBLE_DEVICES=1
+    # environment:
+    #   - NVIDIA_VISIBLE_DEVICES=1
     volumes:
       - ${HOME}/notebooks:/tf/notebooks
       - ./scripts:/tf/scripts
