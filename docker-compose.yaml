@@ -4,14 +4,22 @@ services:
     image: tensorflow/tensorflow:latest-gpu # cuda-10.2 image id: 8a8486aa1902
     ports:
       - 8088:8888
+      - 8066:8866
+      - 8060:8060
     user: root
     ipc: host
     shm_size: 64G
     runtime: nvidia
-    # environment:
-    #   - NVIDIA_VISIBLE_DEVICES=1
+    environment:
+      - JUPYTER_PORT=8888
+      # - NVIDIA_VISIBLE_DEVICES=1
     volumes:
-      - ${HOME}/notebooks:/tf/notebooks
-      - ./scripts:/tf/scripts
-      - ./demo:/tf/demo
+      - ${HOME}/ws:/tf
+      - ${HOME}/notebooks:/notebooks
+      - ./demo:/demo
+      - ./scripts:/scripts
+      # - ${HOME}/notebooks:/tf/notebooks
+      # - ./scripts:/tf/scripts
+      # - ./demo:/tf/demo
+    working_dir: /tf
     command: sleep infinity
