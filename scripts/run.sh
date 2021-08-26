@@ -5,9 +5,9 @@ if [ -z "$1" ]; then
   jupyter=lab
 fi
 
-port=8888
-if [ -z JUPYTER_PORT ]; then
-  port=${JUPYTER_PORT}
+port=${JUPYTER_PORT}
+if [ -z $JUPYTER_PORT ]; then
+  port=8888
 fi
 
 jupyter ${jupyter} --notebook-dir=/tf --ip 0.0.0.0 --no-browser --allow-root --port ${port}

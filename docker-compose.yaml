@@ -2,22 +2,25 @@ version: '2.4'
 services:
   jupyter:
     image: tensorflow/tensorflow:latest-gpu # cuda-10.2 image id: 8a8486aa1902
-    ports:
-      - 8088:8888
-      - 8066:8866
-      - 8060:8060
+    # ports:
+    #   - 8088:8888
+    #   - 8066:8866
+    #   - 8060:8060
     user: root
     ipc: host
     shm_size: 64G
     runtime: nvidia
+    network_mode: host
     environment:
-      - JUPYTER_PORT=8888
+      - JUPYTER_PORT=8088
       # - NVIDIA_VISIBLE_DEVICES=1
     volumes:
       - ${HOME}/ws:/tf
       - ${HOME}/notebooks:/notebooks
       - ./demo:/demo
       - ./scripts:/scripts
+      - ${HOME}/datasets:/datasets
+      - /data/leo:/data
       # - ${HOME}/notebooks:/tf/notebooks
       # - ./scripts:/tf/scripts
       # - ./demo:/tf/demo
