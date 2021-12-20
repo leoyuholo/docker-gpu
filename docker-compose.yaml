@@ -18,5 +18,6 @@ services:
       - ${HOME}/notebooks:/tf/notebooks
       - ./scripts:/tf/scripts
       - ./demo:/tf/demo
+      - ./readme.md:/tf/readme.md
     working_dir: /tf
     command: sleep infinity
