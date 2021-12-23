@@ -1,7 +1,8 @@
 version: '3'
 services:
   jupyter:
-    image: tensorflow/tensorflow:latest-gpu
+    image: gpu-conda-jupyter:latest
+    # image: tensorflow/tensorflow:latest-gpu
     deploy:
       resources:
         reservations:
@@ -20,4 +21,5 @@ services:
       - ./demo:/tf/demo
       - ./readme.md:/tf/readme.md
     working_dir: /tf
-    command: sleep infinity
+    # command: sleep infinity
+    # command: bash -c /scripts/run.sh
