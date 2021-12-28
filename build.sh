@@ -7,3 +7,4 @@ if [ -z $version ]; then
 fi
 
 docker build . -t gpu-conda-jupyter:${version} -t gpu-conda-jupyter:latest
+# docker build . -f Dockerfile.leo -t gpu-conda-jupyter:leo

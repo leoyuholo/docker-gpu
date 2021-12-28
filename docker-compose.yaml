@@ -1,6 +1,7 @@
 version: '3'
 services:
   jupyter:
+    # image: gpu-conda-jupyter:leo
     image: gpu-conda-jupyter:latest
     # image: tensorflow/tensorflow:latest-gpu
     deploy:
@@ -20,6 +21,8 @@ services:
       - ${HOME}/jupyter/.jupyter:/root/.jupyter
       - ./demo:/demo
       - /data:/data
+      # - ./scripts:/scripts
+      # - ${HOME}/docker:/docker
     working_dir: /jupyter
     command: sleep infinity
     # command: bash -c /scripts/run.sh

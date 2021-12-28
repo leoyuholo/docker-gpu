@@ -1,5 +1,5 @@
 #!/bin/sh
-set -e
+# set -e
 
 # extensions:
 pip install jupyterlab_sublime
@@ -20,13 +20,14 @@ pip install lckr-jupyterlab-variableinspector
 pip install nbdime
 
 # rich editor:
-# pip install jupyterlab-lsp
-# pip install 'python-lsp-server[all]'
-# ln -s / ~/.lsp_symlink
+pip install jupyterlab-lsp
+pip install 'python-lsp-server[all]'
+# mamba install -y -c conda-forge jupyter-lsp-python pyls-black
+ln -s / ~/.lsp_symlink
 
 # kite:
-bash -c "$(wget -q -O - https://linux.kite.com/dls/linux/current)"
-pip install "jupyterlab-kite>=2.0.2"
+# bash -c "$(wget -q -O - https://linux.kite.com/dls/linux/current)"
+# pip install "jupyterlab-kite>=2.0.2"
 
 # spellchecker:
 pip install jupyterlab-spellchecker
