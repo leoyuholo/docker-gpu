@@ -1,9 +1,14 @@
 #!/bin/bash
 
 version=$(docker images | awk '($1 == "gpu-conda-jupyter") {print $2 += .01; exit}')
-echo $version
 if [ -z $version ]; then
   . build.sh
 fi
 
-USERID=$(id -u) GROUPID=$(id -g) docker-compose -p ${USER}-gpu up
+nb_dir=${HOME}/jupyter
+mkdir $nb_dir
+ln -s /data ${nb_dir}/data
+ln -s /demo ${nb_dir}/demo
+
+USERID=$(id -u) GROUPID=$(id -g) docker-compose -p ${USER}-gpu up -d
+docker-compose -p ${USER}-gpu exec jupyter /bin/bash -c 'cd /jupyter && /bin/bash /scripts/run.sh'

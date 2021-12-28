@@ -43,7 +43,7 @@ pip install ipympl
 # voila:
 pip install voila
 
-chown jovyan:jovyan -R ~/
+# chown jovyan:jovyan -R ~/
 
 # rebuild frontend:
 jupyter lab build

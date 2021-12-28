@@ -16,10 +16,10 @@ services:
     user: root
     shm_size: 256G
     volumes:
-      - ${HOME}/notebooks:/tf/notebooks
-      - ./scripts:/tf/scripts
-      - ./demo:/tf/demo
-      - ./readme.md:/tf/readme.md
-    working_dir: /tf
-    # command: sleep infinity
+      - ${HOME}/jupyter:/jupyter
+      - ${HOME}/jupyter/.jupyter:/root/.jupyter
+      - ./demo:/demo
+      - /data:/data
+    working_dir: /jupyter
+    command: sleep infinity
     # command: bash -c /scripts/run.sh

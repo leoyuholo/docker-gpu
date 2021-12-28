@@ -1,10 +1,10 @@
 FROM tensorflow/tensorflow:latest-gpu
 
-ADD ./scripts /scripts
-
-RUN bash /scripts/setup.sh
+COPY ./scripts /scripts
 
 SHELL ["/bin/bash", "--login", "-c"]
+
+RUN bash /scripts/setup.sh
 
 RUN bash /scripts/setup_cont.sh
 
