@@ -24,5 +24,6 @@ services:
       # - ./scripts:/scripts
       # - ${HOME}/docker:/docker
     working_dir: /jupyter
+    restart: unless-stopped
     command: sleep infinity
     # command: bash -c /scripts/run.sh
