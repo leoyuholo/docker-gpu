@@ -1,4 +1,4 @@
 #!bin/bash
 set -e
 
-mamba install -y pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch -c conda-forge
+mamba install -y -c pytorch -c conda-forge pytorch torchvision torchaudio cudatoolkit=11.3
