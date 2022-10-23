@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker-compose -p ${USER}-gpu down
+docker compose -p ${USER}-gpu down

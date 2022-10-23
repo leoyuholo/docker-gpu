@@ -1,3 +1,4 @@
 #!bin/bash
 
-mamba install -y pip
+# conda install -y -c anaconda pip
+mamba install -y -c anaconda pip

@@ -3,7 +3,7 @@ services:
   jupyter:
     # image: gpu-conda-jupyter:leo
     image: gpu-conda-jupyter:latest
-    # image: tensorflow/tensorflow:2.8.0-gpu
+    # image: tensorflow/tensorflow:2.10.0-gpu
     deploy:
       resources:
         reservations:
