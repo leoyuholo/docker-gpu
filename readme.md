@@ -14,9 +14,9 @@ For GPU usage, nvidia-docker is also required, see [the project page](https://gi
 
 ## Spinning up an environment
 
-There are 3 `.sh` files for convenience usage, `run.sh`, `exec.sh` and `stop.sh`.
+There are 3 `.sh` files for conveniently use, `run.sh`, `exec.sh` and `stop.sh`.
 
-`run.sh` is to create the docker containers and run Jupyter Lab.
+`run.sh` is to create the docker containers and run in the background. But Jupyter Notebook is not started yet, you need to start Jupyter Notebook inside the container.
 
 `exec.sh` gets a bash shell inside the container. In this bash shell, run `scripts/run.sh` to start Jupyter Notebook.
 
