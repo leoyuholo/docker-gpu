@@ -6,5 +6,6 @@ if [ -z $version ]; then
   version=0.01
 fi
 
-docker build . -t gpu-conda-jupyter:${version} -t gpu-conda-jupyter:latest
-# docker build . -f Dockerfile.leo -t gpu-conda-jupyter:leo
+docker build --progress=plain . -t gpu-conda-jupyter:${version} -t gpu-conda-jupyter:latest
+# docker build . -t gpu-conda-jupyter:${version} -t gpu-conda-jupyter:latest
+# docker build --progress=plain . -f Dockerfile.leo -t gpu-conda-jupyter:leo

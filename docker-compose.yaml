@@ -3,7 +3,7 @@ services:
   jupyter:
     # image: gpu-conda-jupyter:leo
     image: gpu-conda-jupyter:latest
-    # image: tensorflow/tensorflow:latest-gpu
+    # image: tensorflow/tensorflow:2.15.0-gpu
     deploy:
       resources:
         reservations:
@@ -21,7 +21,7 @@ services:
       - ${HOME}/jupyter/.jupyter:/root/.jupyter
       - ./demo:/demo
       - /data:/data
-      # - ./scripts:/scripts
+      - ./scripts:/scripts
       # - ${HOME}/docker:/docker
     working_dir: /jupyter
     restart: unless-stopped
