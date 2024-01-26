@@ -12,6 +12,7 @@ services:
               count: all
               capabilities: [gpu]
     ports:
+      # - "${USERID}2:22"
       - "${USERID}8:8888"
       - "${USERID}6:8866"
     user: root

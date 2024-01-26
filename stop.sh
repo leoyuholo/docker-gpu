@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker-compose -p ${USER}-gpu stop
+docker compose -p ${USER}-gpu stop
